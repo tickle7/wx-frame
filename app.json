@@ -1,7 +1,8 @@
 {
     "pages": [
         "pages/formdemo/formdemo",
-        "pages/listdemo/listdemo"
+        "pages/listdemo/listdemo",
+        "pages/detaildemo/detail"
     ],
     "permission": {
         "scope.userLocation": {
