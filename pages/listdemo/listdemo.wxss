@@ -1,0 +1,114 @@
+.list-img {
+    width: 20%;
+    padding-right: 20rpx;
+    height: 120rpx;
+    vertical-align: middle;
+    float: left;
+    box-sizing: border-box;
+}
+
+.list-btn {
+    padding: 4rpx 32rpx;
+    font-size: 31rpx;
+    text-align: center;
+    border: 1px solid #006eff;
+    background: #006eff;
+    font-weight: 400;
+    color: #fff;
+    white-space: nowrap;
+    opacity: 0.8;
+    margin-left: 20rpx;
+    border-radius: 7rpx;
+}
+
+.list-btn-content {
+    padding: 14rpx 0;
+    width: 100%;
+    margin-bottom: 0 !important;
+}
+
+.align-right {
+    text-align: right;
+}
+
+.align-center {
+    text-align: center;
+}
+
+.align-left {
+    text-align: left;
+}
+
+.list {
+    width: 100%;
+    height: 100%;
+}
+
+.list-item {
+    width: 100%;
+    padding: 14rpx 28rpx;
+    font-size: 34rpx;
+    color: #666;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.list-item view {
+    display: inline-block;
+    margin-bottom: 14rpx;
+    vertical-align: middle;
+
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.col-10 {
+    width: 100%;
+}
+
+.col-9 {
+    width: 90%;
+}
+
+.col-8 {
+    width: 80%;
+}
+
+.col-7 {
+    width: 70%;
+}
+
+.col-6 {
+    width: 60%;
+}
+
+.col-5 {
+    width: 50%;
+}
+
+.col-4 {
+    width: 40%;
+}
+
+.col-3 {
+    width: 30%;
+}
+
+.col-2 {
+    min-width: 20%;
+}
+
+.col-1 {
+    min-width: 10%;
+}
+
+.col-0 {
+    width: 0;
+}
+
+.ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

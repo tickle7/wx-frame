@@ -1,0 +1,4 @@
+
+<import src="../template/formfree/formfree.wxml" />
+
+<template is="formfree" data="{{fields:fields,buttons:buttons,formdata:formdata,textarea:textarea}}" />

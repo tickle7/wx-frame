@@ -1,0 +1,58 @@
+<template name="formfree">
+    <view class="page">
+        <form bindsubmit="formSubmit" report-submit="true" class="form">
+            <scroll-view class="inp-content overflow-y" scroll-y="true">
+                <block wx:for="{{fields}}" wx:key="key">
+                    <block wx:for="{{formdata}}" wx:key="key" wx:for-index="key" wx:for-item="childItem">
+                        <block wx:if="{{item.type == 'input' && item.field == key}}">
+                            <view class="inp-item">
+                                <label class="inp-label">{{item.displayName}}</label>
+                                <input name="{{item.field}}" placeholder="{{item.placeholder}}" value="{{childItem}}"></input>
+                            </view>
+                        </block>
+                        <block wx:if="{{item.type == 'radio' && item.field == key}}">
+                            <view class="inp-item">
+                                <label class="inp-label">{{item.displayName}}</label>
+                                <radio-group name="{{item.field}}">
+                                    <label style="margin-right: 28rpx;">
+                                        <radio color="#006eff" value="1.男" checked="{{childItem == '1.男'}}" />1.男</label>
+                                    <label>
+                                        <radio color="#006eff" value="0.女" checked="{{childItem == '0.女'}}" />0.女</label>
+                                </radio-group>
+                            </view>
+                        </block>
+                        <block wx:if="{{item.type == 'text' && item.field == key}}">
+                            <input name="{{item.field}}" placeholder="{{item.placeholder}}" disabled="disabled" value="{{childItem}}"></input>
+                        </block>
+                        <block wx:if="{{item.type == 'date' && item.field == key}}">
+                            <picker class="inp-item" mode="date" value="{{childItem}}" data-field="{{key}}" name="{{item.field}}" bindchange="bindPickerChange">
+                                <label class="inp-label">{{item.displayName}}</label>
+                                <view class="picker">
+                                    {{childItem}}
+                                </view>
+                            </picker>
+                        </block>
+                        <block wx:if="{{item.type == 'textarea' && item.field == key}}">
+                            <label class="inp-label">{{item.displayName}}</label>
+                            <view class="textarea" style="color:#333;" data-target="{{item.field}}" bindtap="btptextarea" wx:if="{{textarea == ''}}">{{childItem}}</view>
+                            <textarea name="{{item.field}}" focus="{{textarea == item.field}}" data-target="{{item.field}}" bindblur="blurtextarea" placeholder="{{item.placeholder}}" wx:if="{{textarea != ''}}" value="{{childItem}}"></textarea>
+                        </block>
+                    </block>
+                </block>
+            </scroll-view>
+            <view class="btn-content">
+                <block wx:for="{{buttons}}" wx:key="key">
+                    <block wx:if="{{item.type == 'del'}}">
+                        <button formType="submit" class="form-btn" data-type="del">{{item.text}}</button>
+                    </block>
+                    <block wx:if="{{item.type == 'add'}}">
+                        <button formType="submit" class="form-btn" data-type="add">{{item.text}}</button>
+                    </block>
+                    <block wx:if="{{item.type == 'submit'}}">
+                        <button formType="submit" class="form-btn" data-type="submit">{{item.text}}</button>
+                    </block>
+                </block>
+            </view>
+        </form>
+    </view>
+</template>

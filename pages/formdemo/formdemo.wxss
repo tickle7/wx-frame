@@ -1,0 +1,86 @@
+.app {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+input {
+    height: 90rpx;
+}
+
+.picker {
+    display: inline-block;
+    height: 90rpx;
+    line-height: 90rpx;
+    width: 1000rpx;
+}
+
+textarea {
+    border: 1px solid #ccc;
+    padding: 3rpx 3rpx;
+    margin: 0 28rpx;
+    height: 300rpx;
+}
+
+.textarea {
+    margin: 0 28rpx;
+    width: auto;
+    height: 300rpx;
+    border: 1px solid #ccc;
+    padding: 12rpx;
+}
+
+.form {
+    width: 100%;
+    height: 100%;
+}
+
+.inp-content {
+    width: 100%;
+    height: calc(100% - 103rpx);
+}
+
+.inp-item {
+    display: flex;
+    flex-wrap: nowrap;
+    height: 90rpx;
+    line-height: 90rpx;
+    border-bottom: 1px solid #eaeaea;
+    white-space: nowrap;
+    margin: 0 28rpx;
+}
+
+.inp-item:last-child {
+    border-bottom: 0;
+}
+
+.inp-label {
+    height: 90rpx;
+    line-height: 90rpx;
+    min-width: 190rpx;
+    text-align: right;
+    display: inline-block;
+    color: #666;
+}
+
+.btn-content {
+    width: 100%;
+    display: flex;
+    white-space: nowrap;
+    justify-content: space-around;
+    position: absolute;
+    padding: 10rpx 28rpx;
+    left: 0;
+    bottom: 0;
+    background: #fff;
+    z-index: 2;
+}
+
+.form-btn {
+    margin-left: 18rpx;
+}
+
+.form-btn:first-child {
+    margin-left: 0;
+}
