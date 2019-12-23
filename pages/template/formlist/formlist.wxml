@@ -1,19 +1,27 @@
 <!--pages/template/formlist/formlist.wxml-->
 <template name="formlist">
-    <view class="app">
-        <view class="list">
-            <view class="list-item" wx:for="{{listData}}" wx:key="key" wx:for-item="childItem">
-                <block wx:for="{{fieldDefine}}" wx:key="key">
-                    <block wx:for="{{childItem}}" wx:key="key" wx:if="{{item.field == key}}" wx:for-index="key" wx:for-item="field">
-                        <image wx:if="{{item.field == 'img'}}" class="{{item.className}}" src="{{field}}"></image>
-                        <view wx:if="{{item.field != 'img'}}" class="{{item.className}}">{{field}}</view>
-                    </block>
-                </block>
-                <view class="list-btn-content align-right" wx:if="{{buttomDefine.length > 0}}">
-                    <view wx:for="{{buttomDefine}}" wx:key="key" bindtap="{{item.type}}" wx:if="{{childItem.ordertype == item.state}}" data-parm="{{childItem}}" data-target="{{item.field}}" class="list-btn">{{item.text}}</view>
-                    <view wx:for="{{buttomDefine}}" wx:key="key" bindtap="{{item.type}}" wx:if="{{item.isfixed != false}}" data-parm="{{childItem}}" data-target="{{item.field}}" class="list-btn">{{item.text}}</view>
-                </view>
-            </view>
-        </view>
-    </view>
+	<view class="app">
+		<!-- <picker class="listdate" value="{{searchdate}}" mode="date" fields="month" bindchange="bindSearchDate">
+			<view class="picker">
+				核算期：{{searchdate}} ▼
+			</view>
+		</picker>
+		<view class="search-content">
+			<input placeholder="搜索区域" class="search" />
+		</view> -->
+		<view class="list">
+			<view class="list-item" wx:for="{{listData}}" wx:key="key" wx:for-item="childItem">
+				<block wx:for="{{fieldDefine}}" wx:key="key">
+					<block wx:for="{{childItem}}" wx:key="key" wx:if="{{item.field == key}}" wx:for-index="key" wx:for-item="field">
+						<image wx:if="{{item.field == 'img'}}" class="{{item.className}}" src="{{field}}"></image>
+						<view wx:if="{{item.field != 'img'}}" class="{{item.className}}">{{field}}</view>
+					</block>
+				</block>
+				<view class="list-btn-content align-right" wx:if="{{buttomDefine.length > 0}}">
+					<view wx:for="{{buttomDefine}}" wx:key="key" bindtap="{{item.type}}" wx:if="{{childItem.ordertype == item.state}}" data-parm="{{childItem}}" data-target="{{item.field}}" class="list-btn">{{item.text}}</view>
+					<view wx:for="{{buttomDefine}}" wx:key="key" bindtap="{{item.type}}" wx:if="{{item.isfixed != false}}" data-parm="{{childItem}}" data-target="{{item.field}}" class="list-btn">{{item.text}}</view>
+				</view>
+			</view>
+		</view>
+	</view>
 </template>

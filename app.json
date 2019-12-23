@@ -2,7 +2,9 @@
     "pages": [
         "pages/formdemo/formdemo",
         "pages/listdemo/listdemo",
-        "pages/detaildemo/detail"
+        "pages/detaildemo/detail",
+        "pages/list/list",
+        "pages/groupform/groupform"
     ],
     "permission": {
         "scope.userLocation": {

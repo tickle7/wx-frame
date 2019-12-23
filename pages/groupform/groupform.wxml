@@ -1,0 +1,80 @@
+<view class="page">
+	<form bindsubmit="formSubmit" report-submit="true" class="form">
+		<scroll-view class="inp-content overflow-y" scroll-y="true">
+            <view class="group-block">数据范围</view>
+			<view class="inp-item">
+				<label class="inp-label">核算单位：</label>
+				<input name="" placeholder="" value="z0.总部"></input>
+                <image class="right-icon" src="../../image/right.png"></image>
+			</view>
+			<view class="inp-item">
+				<label class="inp-label">数据类型：</label>
+				<input name="" placeholder="" value="z0.实际数据"></input>
+                <image class="right-icon" src="../../image/right.png"></image>
+			</view>
+			<view class="inp-item">
+				<label class="inp-label">核算期：</label>
+				<input name="" placeholder="" value="201909"></input>
+			</view>
+			<view class="inp-item">
+				<label class="inp-label">科目：</label>
+				<input name="" placeholder="请输入科目" value=""></input>
+                <image class="right-icon" src="../../image/right.png"></image>
+			</view>
+			<view class="inp-item">
+				<label class="inp-label">科目性质：</label>
+				<input name="" placeholder="请输入科目性质" value=""></input>
+                <image class="right-icon" src="../../image/right.png"></image>
+			</view>
+			<view class="inp-item">
+				<label class="inp-label">业务日期：</label>
+				<input name="" placeholder="请输入业务日期" value=""></input>
+			</view>
+			<view class="inp-item">
+				<label class="inp-label">币种：</label>
+				<input name="" placeholder="请输入币种" value=""></input>
+                <image class="right-icon" src="../../image/right.png"></image>
+			</view>
+			<view class="inp-item">
+				<label class="inp-label">凭证类型：</label>
+				<input name="" placeholder="请输入凭证类型" value=""></input>
+                <image class="right-icon" src="../../image/right.png"></image>
+			</view>
+			<view class="inp-item">
+				<label class="inp-label">仓库部门：</label>
+				<input name="" placeholder="请输入仓库部门" value=""></input>
+                <image class="right-icon" src="../../image/right.png"></image>
+			</view>
+			<view class="inp-item">
+				<label class="inp-label">奖金类型：</label>
+				<input name="" placeholder="请输入奖金类型" value=""></input>
+                <image class="right-icon" src="../../image/right.png"></image>
+			</view>
+            <view class="group-block">栏目格式</view>
+			<view class="inp-item">
+				<label class="inp-label">包含外币数据：</label>
+				<switch style='zoom:.8;' color="#006eff" name="switch" checked />
+			</view>
+			<view class="inp-item">
+				<label class="inp-label">包含数量数据：</label>
+				<switch style='zoom:.8;' color="#006eff" name="switch" checked />
+			</view>
+            <view class="group-block">余额汇总方式(仅余额查询有效)</view>
+			<view class="inp-item">
+				<label class="inp-label">一级汇总：</label>
+				<input name="" placeholder="请输入奖金类型" value=""></input>
+                <image class="right-icon" src="../../image/right.png"></image>
+			</view>
+			<view class="inp-item">
+				<label class="inp-label">二级汇总：</label>
+				<input name="" placeholder="请输入奖金类型" value=""></input>
+                <image class="right-icon" src="../../image/right.png"></image>
+			</view>
+			<view class="inp-item">
+				<label class="inp-label">三级汇总：</label>
+				<input name="" placeholder="请输入奖金类型" value=""></input>
+                <image class="right-icon" src="../../image/right.png"></image>
+			</view>
+		</scroll-view>
+	</form>
+</view>

@@ -1,17 +1,14 @@
 // pages/listdemo/listdemo.js
 let fieldDefine = [{
-    field: "img",
-    className: "col-2 list-img"
-}, {
     field: "title",
-    className: "col-5 bold ellipsis"
+    className: "col-7 bold ellipsis"
 }, {
     field: "code",
     className: "col-3 align-right",
 },
 {
     field: "desc",
-    className: "col-8"
+    className: "col-10"
 },
 {
     field: "createUser",
@@ -49,7 +46,7 @@ Page({
      */
     data: {
         fieldDefine: fieldDefine,
-        buttomDefine: [{
+        listDefine: [{
             type: "edit",
             text: "编辑",
             field: "id"
@@ -58,20 +55,6 @@ Page({
             type: "del",
             text: "删除",
             field: "id"
-        },
-        {
-            type: "commit",
-            text: "记账",
-            field: "id",
-            isfixed: false,
-            state: 1
-        },
-        {
-            type: "commit",
-            text: "反记",
-            field: "id",
-            isfixed: false,
-            state: 2
         }
         ],
         listData: [{
@@ -80,7 +63,6 @@ Page({
             title: "应收应付对应付对账应收应付对应付对账",
             desc: "备注：华天酒店 应收科目、应收科目对账内容华天酒店 应收科目、应收科目对账内容",
             phone: "13782554866",
-            img: "../../image/yg.jpg",
             createUser: "小王",
             ordertype: 1,
             user1: "小红",
@@ -89,27 +71,12 @@ Page({
             user4: "张三",
             user5: "李四"
         }, {
-            id: "2",
-            code: "q986371241",
-            title: "水镇望京楼精品酒店",
-            desc: "水镇望京楼精品酒店应收科目、应收科目对账内容",
-            phone: "15262554866",
-            createUser: "小李",
-            ordertype: 2,
-            img: "../../image/ys.jpg",
-            user1: "11013903",
-            user2: "小刚",
-            user3: "小李",
-            user4: "18976543214",
-            user5: "李四"
-        }, {
             id: "3",
             code: "c748912441",
             title: "水镇望京楼精品酒店",
             desc: "水镇望京楼精品酒店应收科目、应收科目对账内容",
             phone: "15262554866",
             createUser: "小明",
-            img: "../../image/mj.jpg",
             ordertype: 3,
             user1: "小红",
             user2: "小刚",
@@ -117,18 +84,33 @@ Page({
             user4: "张三",
             user5: "李四"
         }],
-        searchdate: "2019-12"
+        buttomDefine: [{
+            type: "add",
+            text: "新增",
+            field: ""
+        },{
+            type: "add",
+            text: "删除",
+            field: ""
+        },
+        {
+            type: "add",
+            text: "记账",
+            field: "id"
+        }
+        ],
+        where: 'list'
     },
-    bindSearchDate(e) {
+    check(e) {
         this.setData({
-            searchdate: e.detail.value
+            where: e.currentTarget.dataset.check
         })
     },
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-        
+
     },
 
     /**

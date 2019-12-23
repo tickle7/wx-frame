@@ -76,6 +76,20 @@
 					"id": -1,
 					"name": "pages/detaildemo/detail",
 					"pathName": "pages/detaildemo/detail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/list/list",
+					"pathName": "pages/list/list",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/groupform/groupform",
+					"pathName": "pages/groupform/groupform",
 					"scene": null
 				}
 			]

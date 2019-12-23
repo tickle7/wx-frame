@@ -1,0 +1,118 @@
+<!--pages/list/list.wxml-->
+<import src="../template/formlist/formlist.wxml" />
+<view class='container'>
+	<view class='order-detail'>
+		<view class='row'>
+			<view class="column">
+				<view class='label'>凭证类型：</view>
+				<text class='text'>APInvoices</text>
+				<text style="position: absolute;right: 14rpx;color:#006EFF;font-size:34rpx;">编辑</text>
+			</view>
+			<view class="column">
+				<view class='label'>凭证编号：</view>
+				<text class='text'>2019082984c6</text>
+			</view>
+			<view class="column">
+				<view class='label'>数据类型：</view>
+				<text class='text'>实际数据</text>
+			</view>
+			<view class="column">
+				<view class='label'>状态：</view>
+				<text class='text'>暂存</text>
+			</view>
+			<view class="column">
+				<view class='label'>核算期：</view>
+				<text class='text'>201909</text>
+			</view>
+			<view class="column">
+				<view class='label'>制单日期：</view>
+				<text class='text'>2019-04-11</text>
+			</view>
+			<view class="column">
+				<view class='label'>制单人：</view>
+				<text class='text'>丽丽</text>
+			</view>
+			<view class="column">
+				<view class='label'>记账人：</view>
+				<text class='text'>丽丽</text>
+			</view>
+		</view>
+		<view class="row">
+			<view class="column">
+				<view class='label'>凭证类型：</view>
+				<text class='text'>APInvoices</text>
+			</view>
+		</view>
+		<view class="row">
+			<view class="column">
+				<view class='label'>凭证编号：</view>
+				<text class='text'>2019082984c6</text>
+			</view>
+		</view>
+		<view class="row">
+			<view class="column">
+				<view class='label'>数据类型：</view>
+				<text class='text'>实际数据</text>
+			</view>
+		</view>
+		<view class="row">
+			<view class="column">
+				<view class='label'>摘要：</view>
+				<text class='text'>华天酒店 应收科目、应收科目对账内容华天酒店 应收科目、应收科目对账内容</text>
+			</view>
+		</view>
+	</view>
+	<view style="display:flex;background:#fff;font-size:32rpx;justify-content:space-around;border-bottom:1px solid #f5f5f5;">
+		<view bindtap="check" data-check="list" class="{{where == 'list' ? 'select' : ''}}" style="width:130rpx;text-align:center;padding:7px 0;">凭证体</view>
+		<view bindtap="check" data-check="pro" class="{{where == 'pro' ? 'select' : ''}}" style="width:130rpx;text-align:center;padding:7px 0;">审批流程</view>
+	</view>
+	<template wx:if="{{where == 'list'}}" is="formlist" data="{{listData:listData,fieldDefine:fieldDefine,buttomDefine:listDefine}}" />
+	<view wx:if="{{where == 'pro'}}">
+		<view class="van-steps van-steps--vertical">
+			<view class="van-steps__items">
+				<view class="van-hairline van-step van-step--vertical van-step--process">
+					<view class="van-step__title" style="color: rgb(7, 193, 96);">
+						<view>【审批】zcc于2019-12-10审批</view>
+					</view>
+					<view class="van-step__circle-container"><i class="van-icon van-icon-checked van-step__icon" style="color: rgb(7, 193, 96);">
+						</i></view>
+					<view class="van-step__line"></view>
+				</view>
+				<view class="van-hairline van-step van-step--vertical">
+					<view class="van-step__title">
+						<view>【记账】zcc于2019-12-10记账</view>
+					</view>
+					<view class="van-step__circle-container"><i class="van-step__circle"></i></view>
+					<view class="van-step__line"></view>
+				</view>
+				<view class="van-hairline van-step van-step--vertical">
+					<view class="van-step__title">
+						<view>【提交】zzz于2019-12-10提交</view>
+					</view>
+					<view class="van-step__circle-container"><i class="van-step__circle"></i></view>
+					<view class="van-step__line"></view>
+				</view>
+				<view class="van-hairline van-step van-step--vertical">
+					<view class="van-step__title">
+						<view>【创建】zzz于2019-12-10创建</view>
+					</view>
+					<view class="van-step__circle-container"><i class="van-step__circle"></i></view>
+					<view class="van-step__line"></view>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view class="btn-content">
+		<block wx:for="{{buttomDefine}}" wx:key="key">
+			<block wx:if="{{item.type == 'del'}}">
+				<button formType="submit" class="form-btn" data-type="del">{{item.text}}</button>
+			</block>
+			<block wx:if="{{item.type == 'add'}}">
+				<button formType="submit" class="form-btn" data-type="add">{{item.text}}</button>
+			</block>
+			<block wx:if="{{item.type == 'submit'}}">
+				<button formType="submit" class="form-btn" data-type="submit">{{item.text}}</button>
+			</block>
+		</block>
+	</view>
+</view>

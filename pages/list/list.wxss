@@ -1,0 +1,329 @@
+/* pages/page-detail/page-detail.wxss */
+@import '../../lib/vant.wxss';
+
+.reset-order_list{
+    margin:0 20rpx;
+}
+page{
+    overflow-y:auto; 
+    color: #666;
+}
+.select{
+    color:#006EFF;
+    border-bottom:2px solid #006EFF;
+}
+
+.container {
+     width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    font-family: MicrosoftYaHei;
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+   background: #f5f5f5;
+    color: #666;
+    padding-bottom: 78rpx;
+}
+
+.order-detail {
+    padding: 32rpx;
+    /* padding: 32rpx; */
+    /* background: #fff; */
+    /* border-radius: 14rpx; */
+    font-size: 30rpx;
+    line-height: 1.8;
+    /* box-shadow: 2px 3px 6px 0px rgba(0, 0, 0, 0.06); */
+    position: relative;
+     background: #fff;
+     margin: 20rpx;
+    /* word-break: break-all; */
+}
+
+.orderNo-name {
+    letter-spacing: 4px;
+}
+
+.parent-state {
+    position: absolute;
+    right: 32rpx;
+}
+
+.child-itme {
+    margin-left: 150rpx;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+.column{
+    display: flex;
+    min-width: 50%;
+}
+.column text{
+}
+.label {
+    white-space: nowrap;
+    min-width: 145rpx;
+    text-align: right;
+}
+.text{
+   
+}
+.line {
+    border-bottom: 1px solid #ccc;
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    margin-top: 24rpx;
+}
+
+.buttom-itme {
+    margin-top: 40rpx;
+}
+
+.order-price {
+    border-top: 1px solid #ccc;
+    padding: 24rpx 12rpx 24rpx 32rpx;
+    font-size: 30rpx;
+}
+
+.order-list {
+    /* padding: 32rpx; */
+    background: #fff;
+    font-size: 30rpx;
+    border-bottom: 1px solid #ccc;
+}
+
+.list-items {
+    display: flex;
+    color: #999999;
+}
+
+.item-info {
+    width: 80%;
+    line-height: 1.5;
+}
+
+.item-state {
+    width: 20%;
+    line-height: 1.5;
+    text-align: right;
+    color: #666;
+}
+
+.item-name {
+    width: 100%;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    font-weight: 600;
+}
+.state{
+    color: #FFA367;
+}
+
+
+.list-img {
+    width: 20%;
+    padding-right: 20rpx;
+    height: 120rpx;
+    vertical-align: middle;
+    float: left;
+    box-sizing: border-box;
+}
+
+.list-btn {
+    padding: 4rpx 32rpx;
+    font-size: 31rpx;
+    text-align: center;
+    border: 1px solid #006eff;
+    background: #006eff;
+    font-weight: 400;
+    color: #fff;
+    white-space: nowrap;
+    opacity: 0.8;
+    margin-left: 20rpx;
+    border-radius: 7rpx;
+}
+
+.list-btn-content {
+    padding: 14rpx 0;
+    width: 100%;
+    margin-bottom: 0 !important;
+}
+
+.align-right {
+    text-align: right;
+}
+
+.align-center {
+    text-align: center;
+}
+
+.align-left {
+    text-align: left;
+}
+
+.list {
+    width: 100%;
+    height: 100%;
+}
+
+.list-item {
+    width: 100%;
+    padding: 14rpx 28rpx;
+    font-size: 34rpx;
+    color: #666;
+    border-bottom: 1px solid #eaeaea;
+    background: #fff;
+}
+
+.list-item view {
+    display: inline-block;
+    margin-bottom: 14rpx;
+    vertical-align: middle;
+
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.col-10 {
+    width: 100%;
+}
+
+.col-9 {
+    width: 90%;
+}
+
+.col-8 {
+    width: 80%;
+}
+
+.col-7 {
+    width: 70%;
+}
+
+.col-6 {
+    width: 60%;
+}
+
+.col-5 {
+    width: 50%;
+}
+
+.col-4 {
+    width: 40%;
+}
+
+.col-3 {
+    width: 30%;
+}
+
+.col-2 {
+    min-width: 20%;
+}
+
+.col-1 {
+    min-width: 10%;
+}
+
+.col-0 {
+    width: 0;
+}
+
+.ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.app {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+input {
+    height: 90rpx;
+}
+
+.picker {
+    display: inline-block;
+    height: 90rpx;
+    line-height: 90rpx;
+    width: 1000rpx;
+}
+
+textarea {
+    border: 1px solid #ccc;
+    padding: 3rpx 3rpx;
+    margin: 0 28rpx;
+    height: 300rpx;
+}
+
+.textarea {
+    margin: 0 28rpx;
+    width: auto;
+    height: 300rpx;
+    border: 1px solid #ccc;
+    padding: 12rpx;
+}
+
+.form {
+    width: 100%;
+    height: 100%;
+}
+
+.inp-content {
+    width: 100%;
+    height: calc(100% - 103rpx);
+}
+
+.inp-item {
+    display: flex;
+    flex-wrap: nowrap;
+    height: 90rpx;
+    line-height: 90rpx;
+    border-bottom: 1px solid #eaeaea;
+    white-space: nowrap;
+    margin: 0 28rpx;
+}
+
+.inp-item:last-child {
+    border-bottom: 0;
+}
+
+.inp-label {
+    height: 90rpx;
+    line-height: 90rpx;
+    min-width: 190rpx;
+    text-align: right;
+    display: inline-block;
+    color: #666;
+}
+
+.btn-content {
+    width: 100%;
+    display: flex;
+    white-space: nowrap;
+    justify-content: space-around;
+    padding: 10rpx 28rpx;
+    left: 0;
+    bottom: 0;
+    background: #fff;
+    z-index: 2;
+    position: fixed;
+}
+
+.form-btn {
+    margin-left: 18rpx;
+}
+
+.form-btn:first-child {
+    margin-left: 0;
+}

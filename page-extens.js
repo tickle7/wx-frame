@@ -9,20 +9,20 @@ const util = require("./utils/util.js")
 const pageExtens = Page => {
     return object => {
         // 导出原生Page传入的object参数中的生命周期函数
-        // 由于命名冲突，所以将onLoad生命周期函数命名成了onLoaded
-        const { onLoaded } = object
+        // // 由于命名冲突，所以将onLoad生命周期函数命名成了onLoaded
+        // const { onLoaded } = object
 
-        // 公共的onLoad生命周期函数
-        object.onLoad = function (options) {
-            // 在onLoad中执行的代码
-            this.setData({
-                textarea: ""
-            })
-            // 执行onLoaded生命周期函数
-            if (typeof onLoaded === 'function') {
-                onLoaded.call(this, options)
-            }
-        }
+        // // 公共的onLoad生命周期函数
+        // object.onLoad = function (options) {
+        //     // 在onLoad中执行的代码
+        //     this.setData({
+        //         textarea: ""
+        //     })
+        //     // 执行onLoaded生命周期函数
+        //     if (typeof onLoaded === 'function') {
+        //         onLoaded.call(this, options)
+        //     }
+        // }
         // 公共formlist事件
         object.edit = function (e) {
             event.clickFun({

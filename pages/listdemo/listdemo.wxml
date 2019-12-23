@@ -1,2 +1,2 @@
 <import src="../template/formlist/formlist.wxml" />
-<template is="formlist" data="{{listData:listData,fieldDefine:fieldDefine,buttomDefine:buttomDefine}}" />
+<template is="formlist" data="{{listData:listData,fieldDefine:fieldDefine,buttomDefine:buttomDefine,searchdate:searchdate}}" />
